@@ -8,7 +8,7 @@ public:
 };
 %}
 
-%feature(directors) Test;
+%feature("director") Test;
 class Test
 {
 public:
