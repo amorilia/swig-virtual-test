@@ -2,9 +2,8 @@ swig -Wall -c++ -java testmod.i
 
 g++ -fPIC -c testmod_wrap.cxx -o testmod_wrap.o -I/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.6.x86_64/include/ -I/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.6.x86_64/include/linux/ -I/System/Library/Frameworks/JavaVM.framework/Headers -I.
 
-g++ -shared testmod_wrap.o -o libtestmod.so
-# for mac:
-#g++ -dynamiclib testmod_wrap.o -o libtestmod.jnilib
+[ "$1" == "fedora" ] && g++ -shared testmod_wrap.o -o libtestmod.so
+[ "$1" == "mac"    ] && g++ -dynamiclib testmod_wrap.o -o libtestmod.jnilib
 
 javac *.java
 
