@@ -2,5 +2,6 @@
 %{
 #include "src.hpp"
 %}
-%feature("director") Test;
 %include "src.hpp"
+%feature("director") Test<int>; // NOT TestInt
+%template(TestInt) Test<int>;

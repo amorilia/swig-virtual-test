@@ -1,8 +1,13 @@
 import testmod
 
-class Test(testmod.Test):
+class Test(testmod.TestInt):
     def two(self):
-        print "it works!"
+        print("it works!")
+        return 999
+
+t = testmod.TestInt()
+assert t.one() == 0
 
 t = Test()
-t.one() # should print "it works!"
+# should also print "it works!"
+assert t.one() == 999
