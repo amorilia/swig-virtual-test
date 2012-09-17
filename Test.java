@@ -1,11 +1,12 @@
 // test.java
 
-public class Test {
-  static {
-    System.loadLibrary("testmod");
-  }
-
+public class Test extends TestStr {
   public static void main(String argv[]) {
-    System.out.println("Done");
+    Test t = new Test();
+    System.out.println(t.one());
   }
+  public String two() {
+      return "hello";
+  };
 }
+
