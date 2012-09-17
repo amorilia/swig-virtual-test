@@ -3,5 +3,8 @@
 #include "src.hpp"
 %}
 %include "src.hpp"
-%feature("director") Test<int>; // NOT TestInt
-%template(TestInt) Test<int>;
+
+#ifdef SWIGPYTHON
+%feature("director") Test<PyObject *>; // NOT Test
+%template(TestObj) Test<PyObject *>;
+#endif

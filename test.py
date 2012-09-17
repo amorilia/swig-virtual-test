@@ -1,13 +1,14 @@
 import testmod
 
-class Test(testmod.TestInt):
+class Test(testmod.TestObj):
     def two(self):
         print("it works!")
-        return 999
+        return [1, 2, "x"]
 
-t = testmod.TestInt()
-assert t.one() == 0
+t = testmod.TestObj()
+# at the moment, default implementation of two() will raise SystemError
+#assert t.one() == None
 
 t = Test()
 # should also print "it works!"
-assert t.one() == 999
+assert t.one() == [1, 2, "x"]
