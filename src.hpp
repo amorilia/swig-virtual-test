@@ -6,6 +6,7 @@ class Test
 public:
     void one();
     virtual void two();
+    virtual ~Test();
 };
 
 #endif
