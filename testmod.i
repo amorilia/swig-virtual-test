@@ -38,3 +38,7 @@
 %}
 #endif
 
+#ifdef SWIGCSHARP
+%feature("director") Test<void>; // NOT TestObj
+%template(TestObj) Test<void>;
+#endif
