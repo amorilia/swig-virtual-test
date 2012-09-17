@@ -1,6 +1,6 @@
-import testvirtual
+import testmod
 
-class Test(testvirtual.Test):
+class Test(testmod.Test):
     def two(self):
         print "it works!"
 

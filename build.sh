@@ -1,3 +1,3 @@
-swig -c++ -python testvirtual.i
-gcc -fPIC -c testvirtual_wrap.cxx -o testvirtual_wrap.o -I/usr/include/python2.7 -I../include/
-g++ -shared testvirtual_wrap.o -o _testvirtual.so
+swig -Wall -c++ -python testmod.i
+g++ -fPIC -c testmod_wrap.cxx -o testmod_wrap.o -I/usr/include/python2.7 -I../include/
+g++ -shared testmod_wrap.o -o _testmod.so

@@ -1,4 +1,4 @@
-%module(directors="1") testvirtual
+%module(directors="1") testmod
 %{
 class Test
 {
