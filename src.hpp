@@ -4,8 +4,8 @@
 class Test
 {
 public:
-    void one() {};
-    virtual void two() {};
+    void one();
+    virtual void two();
 };
 
 #endif
