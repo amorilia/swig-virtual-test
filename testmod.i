@@ -5,7 +5,7 @@
 %include "src.hpp"
 
 #ifdef SWIGPYTHON
-%feature("director") Test<PyObject *>; // NOT TestObj
+%feature("director") Test<PyObject *>;
 %template(TestObj) Test<PyObject *>;
 // python specific exception handling
 // see http://www.swig.org/Doc2.0/Python.html#Python_nn36
@@ -39,6 +39,6 @@
 #endif
 
 #ifdef SWIGCSHARP
-%feature("director") Test<void>; // NOT TestObj
+%feature("director") Test<void>;
 %template(TestObj) Test<void>;
 #endif
