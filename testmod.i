@@ -38,7 +38,7 @@
 %}
 #endif
 
-#ifdef SWIGCSHARP
+#if defined(SWIGCSHARP) || defined(SWIGPHP)
 %feature("director") Test<void>;
 %template(TestObj) Test<void>;
 #endif
