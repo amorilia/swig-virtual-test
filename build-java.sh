@@ -9,5 +9,5 @@ javac *.java
 
 # run it as well
 # must set java.library.path to the path where libtestmod.so resides
-java -Djava.library.path=./ -cp . Test
+java -Djava.library.path=./ -cp . test
 

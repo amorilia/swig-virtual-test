@@ -1,8 +1,8 @@
 // test.java
 
-public class Test extends TestObj {
+public class test extends TestObj {
   public static void main(String argv[]) {
-    Test t = new Test();
+    test t = new test();
     System.out.println(t.one());
   }
   public Object two() {
